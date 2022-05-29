@@ -19,7 +19,7 @@ public class _01_Annotations {
         System.out.println("This is BEFORE TEST");
     }
 
-    @AfterTest //runc after the class and runs 1 time
+    @AfterTest //runs after the class and runs 1 time
     public void afterTest(){
         System.out.println("This is AFTER TEST");
     }

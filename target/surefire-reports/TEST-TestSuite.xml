@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="1" name="TestSuite" time="12.663" errors="0" skipped="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="118.647" tests="8" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="18.0.1+0"/>
@@ -18,8 +18,7 @@
     <property name="java.runtime.version" value="18.0.1+0"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.io.tmpdir" value="/var/folders/2g/ykvb31ln2153zbmqc9dwzrvc0000gp/T/"/>
-    <property name="line.separator" value="
-"/>
+    <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
     <property name="classworlds.conf" value="/opt/homebrew/Cellar/maven/3.8.5/libexec/bin/m2.conf"/>
@@ -41,7 +40,7 @@
     <property name="java.class.path" value="/opt/homebrew/Cellar/maven/3.8.5/libexec/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="18"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test -PRegression"/>
     <property name="java.home" value="/opt/homebrew/Cellar/openjdk/18.0.1/libexec/openjdk.jdk/Contents/Home"/>
     <property name="apple.awt.application.name" value="Launcher"/>
     <property name="user.language" value="en"/>
@@ -62,42 +61,32 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="scripts._03_EtsyTest" name="testEtsyLogo" time="0.893"/>
-  <testcase classname="scripts._03_EtsyTest" name="testEtsySearch" time="4.089"/>
-  <testcase classname="scripts._03_EtsyTest" name="testEtsySearchResult" time="4.577">
-    <failure message="
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Yousefs-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1c75:b3fb:16e6:838b%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.3.1&apos;, java.version: &apos;18.0.1&apos;
-Driver info: org.openqa.selenium.safari.SafariDriver
-Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 15.4, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 21E258, safari:platformVersion: 12.3.1, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
-Session ID: ECECF4CB-2EBD-4FCA-90C5-907993360B0D
-*** Element info: {Using=css selector, value=.wt-display-inline-flex-sm&gt;span}" type="org.openqa.selenium.NoSuchFrameException">org.openqa.selenium.NoSuchFrameException: 
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Yousefs-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:1c75:b3fb:16e6:838b%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.3.1&apos;, java.version: &apos;18.0.1&apos;
-Driver info: org.openqa.selenium.safari.SafariDriver
-Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 15.4, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 21E258, safari:platformVersion: 12.3.1, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
-Session ID: ECECF4CB-2EBD-4FCA-90C5-907993360B0D
-*** Element info: {Using=css selector, value=.wt-display-inline-flex-sm&gt;span}
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at scripts._03_EtsyTest.testEtsySearchResult(_03_EtsyTest.java:61)
+  <testcase name="testAppleURL" classname="scripts._01_AppleTest" time="2.834"/>
+  <testcase name="testMainHeader" classname="scripts._03_EtsyTest" time="4.648"/>
+  <testcase name="testGoogleStoreLink" classname="scripts._04_GoogleSearchTest" time="14.409"/>
+  <testcase name="testCheckBoxInHeroApp" classname="scripts._05_CheckBoxTest" time="9.801"/>
+  <testcase name="testFacebookGenderRadioButtons" classname="scripts._06_RadioButtonTest" time="8.245"/>
+  <testcase name="testUnsecurePasswordErrorMessage" classname="scripts._07_DropdownTest" time="13.418"/>
+  <testcase name="testExpediaDropdowns" classname="scripts._07_DropdownTest" time="50.885">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;primary-navigation button &quot;}&#10;  (Session info: chrome=102.0.5005.61)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Yousefs-MacBook-Pro.local&apos;, ip: &apos;2601:244:4700:1b20:d5:6f29:1de2:205%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.3.1&apos;, java.version: &apos;18.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/2g/ykvb31ln215...}, goog:chromeOptions: {debuggerAddress: localhost:60790}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 836c71409093a200877c0127906c960b&#10;*** Element info: {Using=css selector, value=primary-navigation button }" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"primary-navigation button "}
+  (Session info: chrome=102.0.5005.61)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Yousefs-MacBook-Pro.local', ip: '2601:244:4700:1b20:d5:6f29:1de2:205%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.3.1', java.version: '18.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/2g/ykvb31ln215...}, goog:chromeOptions: {debuggerAddress: localhost:60790}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 836c71409093a200877c0127906c960b
+*** Element info: {Using=css selector, value=primary-navigation button }
+	at scripts._07_DropdownTest.testExpediaDropdowns(_07_DropdownTest.java:65)
 </failure>
-    <system-err>May 22, 2022 4:00:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+    <system-err><![CDATA[Starting ChromeDriver 102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}) on port 30185
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 29, 2022 3:41:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-</system-err>
+]]></system-err>
   </testcase>
-  <testcase classname="scripts._02_TechGlobalTest" name="testApplicationFormHeading" time="1.264"/>
-  <testcase classname="scripts._01_AppleTest" name="testAppleTitle" time="0.824"/>
-  <testcase classname="scripts._01_AppleTest" name="testAppleURL" time="1.016"/>
+  <testcase name="testEbayDropdown" classname="scripts._07_DropdownTest" time="0"/>
 </testsuite>

@@ -1,17 +1,9 @@
 package scripts;
 
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.Waiter;
-
-import java.util.concurrent.TimeUnit;
-
-import static org.testng.TestRunner.PriorityWeight.priority;
 
 public class _04_GoogleSearchTest extends Base {
 

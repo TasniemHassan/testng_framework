@@ -3,7 +3,6 @@ package scripts;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.HeroAppPage;
 import utilities.Waiter;
 
 public class _05_CheckBoxTest extends Base{

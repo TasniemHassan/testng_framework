@@ -1,14 +1,8 @@
 package scripts;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.EtsySearchPage;
-
-import static org.openqa.selenium.By.cssSelector;
 
 public class _03_EtsyTest extends Base{
 

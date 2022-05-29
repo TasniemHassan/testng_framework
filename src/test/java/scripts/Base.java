@@ -1,7 +1,5 @@
 package scripts;
 
-import com.sun.javafx.scene.control.skin.TableHeaderRow;
-import com.sun.prism.impl.BaseMesh;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -24,6 +22,7 @@ public class Base {
     GoogleSearchResultPage googleSearchResultPage;
     HeroAppPage heroAppPage;
     FaceBookPage faceBookPage;
+    ExpediaPage expediaPage;
 
     @BeforeMethod
     public void setup(){
@@ -38,6 +37,7 @@ public class Base {
         googleSearchResultPage = new GoogleSearchResultPage(driver);
         heroAppPage = new HeroAppPage(driver);
         faceBookPage = new FaceBookPage(driver);
+        expediaPage = new ExpediaPage(driver);
 
 
     }
