@@ -18,9 +18,9 @@ public class Driver {
                    // Telling your system where your chrome driver is located
                    // System.setProperty("webdriver.chrome.driver", "/Users/tasniemhassan/IdeaProjects/selenium_intro/chromedriver");
 
-                   String browser = "chrome"; // define which browser you will run your test in
+                   //String browser = "chrome"; // define which browser you will run your test in
 
-                   switch (browser){
+                   switch (ConfigReader.getProperty("browser")){
                        case "chrome":
                            WebDriverManager.chromedriver().setup();
                            driver = new ChromeDriver();
@@ -37,18 +37,23 @@ public class Driver {
                            throw new NotFoundException("Browser IS NOT DEFINED properly!!!");
                    }
                    driver.manage().window().maximize();
-                   driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+                   driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigReader.getProperty("implicitWait")), TimeUnit.SECONDS);
                }
                return driver;
            }
 
 
     public static void quitDriver(){
-        if(driver!= null){
+               try{
+                   Thread.sleep(3000);
+               }
+               catch (Exception e){
+                   e.printStackTrace();
+               }
+        if(driver != null){
             driver.manage().deleteAllCookies();
             driver.quit();
             driver =null;
-
         }
     }
 }
