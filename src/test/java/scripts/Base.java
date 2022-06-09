@@ -18,6 +18,7 @@ public class Base {
     WebDriverWait explicitWait;
     Wait fluentWait;
     SoftAssert softAssert;
+    AmazonHomePage amazonHomePage;
     EtsySearchPage etsySearchPage;
     TGApplicationPage tgApplicationPage; //declare here
     GoogleSearchPage googleSearchPage;
@@ -25,15 +26,17 @@ public class Base {
     HeroAppPage heroAppPage;
     FaceBookPage faceBookPage;
     ExpediaPage expediaPage;
+    RediffHomePage rediffHomePage;
+    TGHomePage tgHomePage;
 
     @BeforeMethod
     public void setup(){
-        driver = Driver.getDriver();
         driver = Driver.getDriver();
         explicitWait = new WebDriverWait(driver, 30);
         fluentWait = new FluentWait(driver).withTimeout(30, TimeUnit.SECONDS).
                 pollingEvery(2, TimeUnit.SECONDS).ignoring(Exception.class);
         softAssert = new SoftAssert();
+        amazonHomePage = new AmazonHomePage(driver);
         etsySearchPage = new EtsySearchPage(driver); // initialized here
         tgApplicationPage = new TGApplicationPage(driver);
         googleSearchPage = new GoogleSearchPage(driver);
@@ -41,6 +44,8 @@ public class Base {
         heroAppPage = new HeroAppPage(driver);
         faceBookPage = new FaceBookPage(driver);
         expediaPage = new ExpediaPage(driver);
+        rediffHomePage = new RediffHomePage(driver);
+        tgHomePage = new TGHomePage(driver);
 
 
     }

@@ -25,6 +25,42 @@ public class HeroAppPage {
     @FindBy(id="result")
     public WebElement resultParagraph;
 
+    @FindBy(xpath = "//a[text()='iFrame']")
+    public WebElement iFrameLink;
+
+    @FindBy(css="#tinymce>p")
+    public WebElement contentBox;
+
+    @FindBy(xpath= "//h3")
+    public WebElement iFrameHeading3;
+
+    @FindBy(id = "mce_0_ifr")
+    public WebElement innerIFrame;
+
+    @FindBy(css="#content a")
+    public WebElement clickHereLink;
+
+    @FindBy(xpath = "//h3")
+    public WebElement newWindowsH3;
+
+    @FindBy(css="#content h3")
+    public WebElement windowsHeading3;
+
+    @FindBy(id = "file-upload")
+    public WebElement chooseFileInputBox;
+
+    @FindBy(id = "file-submit")
+    public WebElement uploadFileButton;
+
+    @FindBy(xpath = "//h3")
+    public WebElement fileUploadedH3;
+
+    @FindBy(id = "uploaded-files")
+    public WebElement uploadedFileText;
+
+    @FindBy(linkText = "myTasFile2.xls")
+    public WebElement downLoadFileLink;
+
 
     public void clickOnLink(String linkText){
         for (WebElement link : links) {

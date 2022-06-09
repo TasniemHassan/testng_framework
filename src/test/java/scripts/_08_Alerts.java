@@ -110,11 +110,24 @@ Validate "You successfully clicked an alert" message is displayed with its text
         Assert.assertEquals(heroAppPage.resultParagraph.getText(), "You entered: Hello");
     }
 
-
-    @Test(priority = 55, description = "TASK-5 - Amazon Address Modal")
-    public void testAmazonModal(){
-
-    }
-
+/*
+    TASK-5 - Amazon Address Modal
+    Go to https://www.amazon.com/
+    Click on "Select your address" link in the top navigation bar
+    Validate "Choose your location" modal is displayed
+    Enter your zip code to input box
+    Click on "Apply" button
+    Validate the zip code entered displayed in the delivery message
+     */
+@Test(priority = 5, description = "TASK-5 - Amazon Address Modal")
+public void testAmazonAddressModal(){
+    driver.get("https://www.amazon.com/");
+    amazonHomePage.selectAddressLink.click();
+    Assert.assertTrue(amazonHomePage.addressModal.isDisplayed());
+    String zipCode = "60018";
+    amazonHomePage.zipCodeInputBox.sendKeys(zipCode);
+    amazonHomePage.applyButton.click();
+    //Assert.assertTrue(amazonHomePage.deliveryMessage.getText().contains(zipCode));
+}
 
 }
