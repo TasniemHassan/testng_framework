@@ -20,7 +20,7 @@ public class _02_TechGlobalTest extends Base{
             //String expectedHeadingText = ("Application Form");
             //String actualHeadingText = heading1.getText();
 
-            Assert.assertTrue(tgApplicationPage.heading1.isDisplayed());
+           // Assert.assertTrue(tgApplicationPage.heading1.isDisplayed());
             Assert.assertEquals(tgApplicationPage.heading1.getText(), "Application Form");
 
     }

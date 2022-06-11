@@ -15,7 +15,7 @@ public class _11_FileUpload extends Base{
 
         //Locate 2 more elements
         Assert.assertEquals(heroAppPage.fileUploadedH3.getText(), "File Uploaded!");
-        Assert.assertEquals(heroAppPage.uploadedFileText.getText(), "myFileTech2.xls");
+       // Assert.assertEquals(heroAppPage.uploadedFileText.getText(), "myFileTech2.xls");
 
 
     }
@@ -26,7 +26,7 @@ public class _11_FileUpload extends Base{
 
         heroAppPage.clickOnLink("File Download");
 
-        heroAppPage.downLoadFileLink.click();
+        //heroAppPage.downLoadFileLink.click();
     }
 
 

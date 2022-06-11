@@ -127,7 +127,8 @@ public void testAmazonAddressModal(){
     String zipCode = "60018";
     amazonHomePage.zipCodeInputBox.sendKeys(zipCode);
     amazonHomePage.applyButton.click();
-    //Assert.assertTrue(amazonHomePage.deliveryMessage.getText().contains(zipCode));
+    Waiter.pause(5);
+    Assert.assertTrue(amazonHomePage.deliveryMessage.getText().contains(zipCode));
 }
 
 }

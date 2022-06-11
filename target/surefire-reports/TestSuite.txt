@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 26, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 374.827 sec <<< FAILURE! - in TestSuite
+testMainHeader(scripts._03_EtsyTest)  Time elapsed: 4.013 sec  <<< FAILURE!
+java.lang.AssertionError: The expected text is not displayed expected [Shop Home Sales!] but found [Father's Day Gifts]
+	at scripts._03_EtsyTest.testMainHeader(_03_EtsyTest.java:81)
+
+testExpediaDropdowns(scripts._07_DropdownTest)  Time elapsed: 50.022 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"primary-navigation button "}
+  (Session info: chrome=102.0.5005.61)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Yousefs-MacBook-Pro.local', ip: 'fe80:0:0:0:8a6:5225:d782:6b0e%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.3.1', java.version: '18.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/2g/ykvb31ln215...}, goog:chromeOptions: {debuggerAddress: localhost:51620}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ca8f844068bb4e0bbfc7f26efeeb49e5
+*** Element info: {Using=css selector, value=primary-navigation button }
+	at scripts._07_DropdownTest.testExpediaDropdowns(_07_DropdownTest.java:65)
+
+testFileUpload1(scripts._11_FileUpload)  Time elapsed: 4.174 sec  <<< FAILURE!
+java.lang.AssertionError: expected [myFileTech2.xls] but found [myTasFile2.xls]
+	at scripts._11_FileUpload.testFileUpload1(_11_FileUpload.java:18)
+
+practiceKeyDownAndKeyUp(scripts._12_Actions_Class)  Time elapsed: 0.068 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+disconnected: Unable to receive message from renderer
+  (Session info: chrome=102.0.5005.61)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Yousefs-MacBook-Pro.local', ip: 'fe80:0:0:0:8a6:5225:d782:6b0e%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.3.1', java.version: '18.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/2g/ykvb31ln215...}, goog:chromeOptions: {debuggerAddress: localhost:53903}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 45b020dcdb32b2886484abb6c924a494
+	at scripts._12_Actions_Class.practiceKeyDownAndKeyUp(_12_Actions_Class.java:129)
+
