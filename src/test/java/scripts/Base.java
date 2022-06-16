@@ -1,5 +1,6 @@
 package scripts;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -20,6 +21,7 @@ public class Base {
     Wait fluentWait;
     SoftAssert softAssert;
     Actions actions;
+    JavascriptExecutor js;
     AmazonHomePage amazonHomePage;
     EtsySearchPage etsySearchPage;
     TGApplicationPage tgApplicationPage; //declare here
@@ -31,7 +33,7 @@ public class Base {
     RediffHomePage rediffHomePage;
     TGHomePage tgHomePage;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup(){
         driver = Driver.getDriver();
         explicitWait = new WebDriverWait(driver, 30);
@@ -39,6 +41,7 @@ public class Base {
                 pollingEvery(2, TimeUnit.SECONDS).ignoring(Exception.class);
         softAssert = new SoftAssert();
         actions = new Actions(driver);
+        js = (JavascriptExecutor) driver;
         amazonHomePage = new AmazonHomePage(driver);
         etsySearchPage = new EtsySearchPage(driver); // initialized here
         tgApplicationPage = new TGApplicationPage(driver);
@@ -54,7 +57,7 @@ public class Base {
     }
 
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void teardown(){
         softAssert.assertAll();
         Driver.quitDriver();
